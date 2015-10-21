@@ -50,16 +50,22 @@ $(function(){
 		if(!drawed){
 			if(!flag||cleaned){
 				//Crear un nuevo poligono
-				var polygon =  new Polygon(points,ctx);
-				// Dibujar el poligono
-				polygon.draw();
 
-				polygons.push(polygon);
-				points = [];
+				if(points.length>1){
+					var polygon =  new Polygon(points,ctx);
+					// Dibujar el poligono
+					polygon.draw();
 
-				drawed = true;
-				flag = true;
-				cleaned = false;
+					polygons.push(polygon);
+					points = [];
+
+					drawed = true;
+					flag = true;
+					cleaned = false;
+				}
+				else {
+					alert('Por favor seleccione los puntos antes de dibujar')
+				}
 			}
 			else {
 				alert('Por favor realize una accion, rotar o mover, antes de volver a dibujar');
@@ -109,6 +115,7 @@ $(function(){
 		drawed = false;
 		polygons=[];
 		clearScreen(c,ctx);
+		var angle = $("#angle").val("");
 	});
 
 });

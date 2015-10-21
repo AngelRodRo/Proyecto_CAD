@@ -87,6 +87,7 @@ Polygon.prototype.draw = function() {
 	var line;
 
 
+
 	if(points.length>1){
 
 		for (var i = 0; i < points.length; i++) {
