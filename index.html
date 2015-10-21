@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+		#canvas {
+			cursor: pointer;
+			border:1px solid black;
+			transform: scaleY(-1);
+		}
+		#canvas:hover {
+			cursor: crosshair;
+		}
+
+	</style>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="model/line.js"></script>
+	<script src="model/polygon.js"></script>
+	<script src="model/main.js"></script>
+	<script src="model/dot.js"></script>
+
+</head>
+<body>
+
+	<canvas id="canvas" width="500" height="500">	</canvas>
+	<input type="text" id="angle">
+	<input type="button" id="rotate" value="Rotar">
+	<button id="draw">Dibujar</button>
+	<button id="move">Mover</button>
+
+</body>
+</html>
